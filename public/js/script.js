@@ -1,0 +1,1 @@
+alert("Chương trình đã chạy");

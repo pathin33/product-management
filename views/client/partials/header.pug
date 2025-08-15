@@ -1,0 +1,23 @@
+// Header Navigation
+nav.navbar.navbar-expand-lg.navbar-light.bg-white
+  .container
+    // Brand với logo
+    a.navbar-brand.d-flex.align-items-center(href='/')
+      img(src='/images/logo.svg', alt='Logo', class='me-2' style='height: 50px;')
+      span.fw-bold MyBrand
+
+    // Toggle button cho mobile
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav')
+      span.navbar-toggler-icon
+
+    // Navigation Menu
+    .collapse.navbar-collapse#navbarNav
+      ul.navbar-nav.ms-auto
+        li.nav-item
+          a.nav-link(href='/')
+            i.bi.bi-house.me-1
+            | Trang chủ
+        li.nav-item
+          a.nav-link(href='/products')
+            i.bi.bi-box.me-1
+            | Sản phẩm  

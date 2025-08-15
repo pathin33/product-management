@@ -1,0 +1,140 @@
+/* Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header ở trên cùng */
+header {
+    background-color: #343a40 !important;
+    color: white;
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.imgheadr img {
+    height: 50px;
+}
+
+.textheadr a {
+    text-decoration: none;
+    color: white;
+    font-size: xx-large;
+}
+
+/* Body chứa sider và main */
+.body {
+    display: flex;
+}
+
+/* Sider ở bên trái */
+.sider {
+    width: 200px;
+    background-color: #343a40 !important;
+    min-height: calc(100vh - 60px);
+}
+
+/* Main content ở bên phải */
+.main {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+/* Sider nav */
+.sider .nav-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sider .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* css cho views products  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+thead {
+    background-color: #343a40;
+    color: white;
+}
+
+th,
+td {
+    padding: 10px 15px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+    /* không vượt quá 100px */
+    height: auto;
+    /* giữ nguyên tỉ lệ */
+    border-radius: 6px;
+    /* bo góc nhẹ */
+    border: 1px solid #ddd;
+    /* viền mờ */
+    padding: 3px;
+    background-color: #fff;
+    /* nền trắng để ảnh nổi hơn */
+    object-fit: contain;
+    /* đảm bảo không méo ảnh */
+}
+
+
+.badge {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge-success:hover {
+    background-color: #218838;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.badge-secondary:hover {
+    background-color: #5a6268;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-warning:hover {
+    background-color: #e0a800;
+}
