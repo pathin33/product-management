@@ -24,3 +24,21 @@ if (button.length > 0) {
 
 }
 // end bộ lọc trạng thái
+
+//tìm kiếm
+const inputSearch = document.getElementById("inputSearch");
+const fromSearch = document.getElementById("form-search");
+fromSearch.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let url = new URL(window.location.href);
+    const valueSearch = inputSearch.value;
+    if (valueSearch) {
+        url.searchParams.set("keyword", valueSearch);
+    }
+    else {
+        url.searchParams.delete("keyword");
+    }
+    window.location.href = url.href;
+
+});
+// end tìm kiếm

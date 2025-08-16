@@ -1,5 +1,6 @@
 const Product = require("../../models/products_model");
 module.exports.products = async (req, res) => {
+    //in sản phẩm
     const btnStatus = [
         {
             class: "",
@@ -35,9 +36,15 @@ module.exports.products = async (req, res) => {
     if (req.query.status) {
         filter.status = req.query.status;
     }
-    const products = await Product.find(filter);
-    console.log(products);
+    //end in sản phẩm
 
+    //tìm kiếm tên sản phẩm
+    if (req.query.keyword) {
+        filter.title = { $regex: req.query.keyword }
+    }
+    //end tìm kiếm tên sản phẩm
+
+    const products = await Product.find(filter);
 
     res.render("./admin/pages/products/index.pug", {
         Title: "Sản Phẩm",
